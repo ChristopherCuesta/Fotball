@@ -2,6 +2,7 @@
 #include "ingreso.h"
 #include "torneo.h"
 #include "resultados.h"
+// archivo creado por Juan David Calle, Steve Torres, Christopher Cuesta
 
 int main() {
     char equipos[100][100];
