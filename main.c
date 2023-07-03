@@ -14,14 +14,9 @@ int main() {
         numEquipos = ingresoEquipos(equipos);
     }
     
-    // Pedir ingreso o generación automática de resultados
     generarResultados(numEquipos, equipos);
 
-    // Leer los resultados y calcular los puntos
     calcularPuntos(numEquipos, equipos);
-
-    // Imprimir las tablas de resultados
-    imprimirResultados(numEquipos, equipos);
     
     return 0;
 }

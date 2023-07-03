@@ -14,7 +14,7 @@ void generarResultados(int numEquipos, char equipos[][100]) {
     scanf("%d", &opcion);
 
     if (opcion == 1) {
-        // Ingresar manualmente los resultados
+        
         printf("\nIngreso manual de resultados:\n");
 
         for (i = 0; i < numEquipos; i++) {
@@ -28,14 +28,14 @@ void generarResultados(int numEquipos, char equipos[][100]) {
             }
         }
     } else if (opcion == 2) {
-        // Generar resultados aleatorios
+       
         srand(time(NULL));
 
         printf("\nGeneración automática de resultados:\n");
 
         for (i = 0; i < numEquipos; i++) {
             for (j = i + 1; j < numEquipos; j++) {
-                int golesEquipo1 = rand() % 5; // Genera un número aleatorio entre 0 y 4
+                int golesEquipo1 = rand() % 5; 
                 int golesEquipo2 = rand() % 5;
 
                 printf("%s vs %s: %d - %d\n", equipos[i], equipos[j], golesEquipo1, golesEquipo2);

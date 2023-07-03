@@ -7,7 +7,6 @@ void calcularPuntos(int numEquipos, char equipos[][100]) {
     archivoResultados = fopen("resultados.txt", "r");
 
     int puntos[numEquipos];
-    
 
     char equipo1[100], equipo2[100];
     int golesEquipo1, golesEquipo2;
@@ -37,7 +36,7 @@ void calcularPuntos(int numEquipos, char equipos[][100]) {
 
     fclose(archivoResultados);
 
-    // Ordenar los equipos según los puntos obtenidos (método de la burbuja)
+    
     for (int i = 0; i < numEquipos - 1; i++) {
         for (int j = 0; j < numEquipos - i - 1; j++) {
             if (puntos[j] < puntos[j + 1]) {
@@ -52,28 +51,12 @@ void calcularPuntos(int numEquipos, char equipos[][100]) {
             }
         }
     }
-}
-
-void imprimirResultados(int numEquipos, char equipos[][100]) {
-    printf("\nTabla de resultados:\n");
-    printf("Equipo 1\tEquipo 2\tGoles 1\tGoles 2\n");
-
-    FILE *archivoResultados;
-    archivoResultados = fopen("resultados.txt", "r");
-
-    char equipo1[100], equipo2[100];
-    int golesEquipo1, golesEquipo2;
-
-    while (fscanf(archivoResultados, "%s %s %d %s %d", equipo1, equipo2, &golesEquipo1, equipo2, &golesEquipo2) != EOF) {
-        printf("%s\t\t%s\t\t%d\t%d\n", equipo1, equipo2, golesEquipo1, golesEquipo2);
-    }
-
-    fclose(archivoResultados);
 
     printf("\nTabla de posiciones:\n");
-    printf("Posición\tEquipo\n");
+    printf("Posición\tEquipo\\n");
 
     for (int i = 0; i < numEquipos; i++) {
-        printf("%d\t\t%s\n", i + 1, equipos[i]);
+        printf("%d\t\t%s\n", i + 1, equipos[i],);
     }
 }
+
