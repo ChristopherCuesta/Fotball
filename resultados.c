@@ -56,7 +56,7 @@ void calcularPuntos(int numEquipos, char equipos[][100]) {
     printf("Posición\tEquipo\\n");
 
     for (int i = 0; i < numEquipos; i++) {
-        printf("%d\t\t%s\n", i + 1, equipos[i],);
+        printf("%d\t\t%s\n", i + 1, equipos[i]);
     }
 }
 
